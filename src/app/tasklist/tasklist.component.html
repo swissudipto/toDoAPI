@@ -1,0 +1,16 @@
+<div class="container">
+<table class="table">
+    <tr>
+        <th>Task Name</th>
+        <th>Task Start Date</th>
+        <th>Task End Date</th>
+        <th>Task Status</th>
+    </tr>
+    <tr *ngFor="let task of tasklist">
+        <td>{{task.taskname}}</td>
+        <td>{{task.taskstartdate}}</td>
+        <td>{{task.taskenddate}}</td>
+        <td>{{task.taskstatus}}</td>
+    </tr>
+</table>
+</div>
