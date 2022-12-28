@@ -1,6 +1,30 @@
-<div class="h-100 d-flex align-items-center justify-content-center">
-<label for="Taskname">Task Name:</label>
-<input type="text" name="Taskname">
-<input type="button" value="Add Task">
+<div class="container fw-bold">
+
+        <div class="row">
+                <div class="col sm">
+                        <b><label for="Taskname">Task Name: </label></b>
+                        <input [(ngModel)]="newtaskname" type="text" name="Taskname" placeholder="Enter Task name here">
+                </div>
+                <div class="col sm">
+                        <b><label for="Startdate">Start Date: </label></b>
+                        <input [(ngModel)]="newtaskStartdate" type="text" name="Startdate"
+                                placeholder="Enter Task start date here">
+                </div>
+                <div class="col sm">
+                        <b><label for="Enddate">End Date: </label></b>
+                        <input [(ngModel)]="newtaskEnddate" type="text" name="Enddate"
+                                placeholder="Enter Task end date here">
+                </div>
+                <div class="col-sm">
+                        <input (click)="addnewtask()" type="button" value="Add Task" class="btn btn-primary">
+
+                </div>
+        </div>
 
 </div>
+
+
+
+<br>
+<br>
+<app-tasktable [taskliftref]="tasklist" (toberemovetask)="removetask($event)"></app-tasktable>

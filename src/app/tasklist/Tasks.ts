@@ -1,6 +1,7 @@
 export interface task{
+    tasknumber:number,
     taskname:string;
-    taskstartdate:Date;
-    taskenddate:Date;
+    taskstartdate:string;
+    taskenddate:string;
     taskstatus:string;
 }

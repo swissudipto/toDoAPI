@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import { TasklistComponent } from './tasklist/tasklist.component';
 import { TaskmodifierComponent } from './taskmodifier/taskmodifier.component';
 import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { TasktableComponent } from './taskmodifier/tasktable/tasktable.component';
 @NgModule({
   declarations: [
     AppComponent,
     TasklistComponent,
-    TaskmodifierComponent
+    TaskmodifierComponent,
+    TasktableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { DataService } from '../Services/data.service';
 import { task } from './Tasks';
 
@@ -9,22 +9,13 @@ import { task } from './Tasks';
 })
 export class TasklistComponent implements OnInit {
 
-  constructor(private appservice:DataService) { }
 
-  tasklist:task[]=[];
-   /* {
-      taskname:'Learn Data Structure',
-    taskstartdate:new Date('10/03/1997'),
-    taskenddate:new Date('10/03/1997'),
-    taskstatus:'Completed'
-    },
-    {
-    taskname:'Learn System Design',
-    taskstartdate:new Date('10/03/1997'),
-    taskenddate:new Date('10/03/1997'),
-    taskstatus:'Completed'
-    }
-  ];*/
+  constructor(private appservice:DataService) { }
+  
+  @Input() newaddedtask!:task;
+  public tasklist:task[]=[];
+
+
 
   ngOnInit(): void {
     this.appservice.getalltask().subscribe(data=>{
