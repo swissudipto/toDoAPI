@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Issue Fixed
+
+# Bootstap Install issue:
+Skipping installation: Package already installed
+Cannot find module 'C:\Matrix\toDoAPI\node_modules\@schematics\angular\utility\test.js'
+
+Solution:
+ npm uninstall @schematics/angular
+ npm uninstall ngx-bootstrap
+ npm install @schematics/angular@9.1.0 
+ ng add ngx-bootstrap

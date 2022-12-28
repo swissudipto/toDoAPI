@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>SL.</th>
+            <th>Task Name</th>
+            <th>Task Start Date</th>
+            <th>Task End Date</th>
+            <th>Task Status</th>
+        </tr>
+        <tr *ngFor="let task of taskliftref">
+            <td>{{task.tasknumber+1}}</td>
+            <td>{{task.taskname}}</td>
+            <td>{{task.taskstartdate}}</td>
+            <td>{{task.taskenddate}}</td>
+            <td>{{task.taskstatus}}</td>
+            <td><button (click)="removetask(task)" class="btn btn-outline-danger">Remove Task</button></td> 
+        </tr>
+    </table>
+    </div>
