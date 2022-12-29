@@ -21,6 +21,6 @@ export class DataService {
   }
   deletetask(tasktobedeleted:task):Observable<any>
   {
-    return this.http.put('https://localhost:7008/task',tasktobedeleted);
+    return this.http.post('https://localhost:7008/task/deletetask',tasktobedeleted);
   }
 }

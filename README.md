@@ -37,3 +37,7 @@ Solution:
  npm uninstall ngx-bootstrap
  npm install @schematics/angular@9.1.0 
  ng add ngx-bootstrap
+
+ 
+*for Issue- "Package "ngx-bootstrap" was found but does not support schematics."
+    --npm install ngx-bootstrap@latest --legacy-peer-deps 
